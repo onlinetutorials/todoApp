@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/ngstorage/ngStorage.min.js"></script>
+<script src="bower_components/underscore/underscore-min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/angular-google-analytics/dist/angular-google-analytics.min.js"></script>
+
+<script src="ng/app.js"></script>
+<!--  Factory -->
+<script src="ng/factory.js"></script>
+<!--  Dircetives -->
+<script src="views/directives/directives.js"></script>
+<!--  Pages -->
+<script src="views/pages/home/home.js"></script>
+<script src="views/pages/archive/archive.js"></script>
+<script src="views/pages/pages.js"></script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Just Do!</title>
+</head>
+<body ng-app="todoApp">
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <img src="images/logo.png" class="pull-left" height="50px" width="50px"/>
+            <a class="navbar-brand" href="#/">Just Do!</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse" ng-controller="NavigationController">
+            <ul class="nav navbar-nav">
+                <li ng-repeat="menu in menus" class="{{menu.class}}">
+                    <a href="#{{menu.url}}">{{menu.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div ng-view class="pages"></div>
+
+</body>
+</html>

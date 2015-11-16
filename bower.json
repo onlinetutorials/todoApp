@@ -1,0 +1,26 @@
+{
+  "name": "todoApp",
+  "version": "1.0",
+  "authors": [
+    "Arman Eker <arman.eker@gmail.com>"
+  ],
+  "description": "todo app",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "todo",
+    "app"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}

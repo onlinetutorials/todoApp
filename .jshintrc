@@ -1,0 +1,18 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "freeze": true,
+  "latedef": true,
+  "maxdepth": 4,
+  "maxparams": 5,
+  "nocomma": true,
+  "nonew": true,
+  "undef": true,
+  "unused": true,
+  "boss": false,
+  "eqnull": true,
+  "browser": true,
+  "jquery": true,
+  "node": true,
+  "predef": ["angular"]
+}

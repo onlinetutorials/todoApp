@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <input class="input-lg form-control fg-input" type="text"
+                   ng-model="query" placeholder="Search My To Dos">
+            <h3>Things to do</h3>
+            <p ng-hide="activeList.length" style="font-style: italic">Nothing to do? Let's add some to dos!</p>
+            <ul style="list-style: none;">
+                <li ng-repeat="todo in activeList | filter:query | orderBy: '-updatedAt'">
+                    <todo-item todo="todo" update="update(todo)"></todo-item>
+                </li>
+            </ul>
+            <div class="row" ng-show="doneList.length">
+                <div class="col-lg-8">
+                    <hr style="color: lightblue; border-top: 1px solid">
+                </div>
+                <div class="col-lg-4">
+                    <button class="btn btn-link pull-right" ng-click="archiveAll()">Archive All Done To Dos</button>
+                </div>
+            </div>
+            <h3>Done things</h3>
+            <p ng-hide="doneList.length" style="font-style: italic">Nothing is done! Let's get working!</p>
+            <ul style="list-style: none;">
+                <li ng-repeat="todo in doneList | filter:query | orderBy: 'updatedAt'">
+                    <todo-item todo="todo" update="update(todo)"></todo-item>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <form ng-submit="submit()">
+                <input class="input-lg form-control fg-input" type="text"
+                       ng-model="newItem" placeholder="Add New To Do" required=""/>
+                <br/>
+                <button type="submit" class="btn btn-primary">Add To Do</button>
+            </form>
+            <adsense style="margin-top: 20px"></adsense>
+        </div>
+    </div>
+</div>

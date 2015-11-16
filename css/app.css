@@ -1,0 +1,21 @@
+body {
+    background-image: url(../images/grey.png);
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.undo-button {
+    margin-top: 11px;
+    margin-bottom: 11px;
+}
+
+@font-face {
+    font-family: ProximaNovaRegular;
+    src: url("../fonts/ProximaNova-Regular.otf");
+}
+
+.pages {
+    font-family: ProximaNovaRegular;
+}

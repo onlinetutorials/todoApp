@@ -1,0 +1,1 @@
+var pages = angular.module('pages', ['indexPageModule', 'archivePageModule']);
