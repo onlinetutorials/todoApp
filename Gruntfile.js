@@ -70,6 +70,13 @@ module.exports = function(grunt) {
                 src: 'all.js',
                 dest: 'public/js'
             }
+        },
+        bower: {
+            install: {
+                options: {
+                    targetDir: 'bower_components'
+                }
+            }
         }
     });
 
@@ -79,9 +86,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-bower-installer');
 
     // Default task(s).
     grunt.registerTask('build-test', ['jshint', 'concat:js', 'concat:css', 'copy:images']);
     grunt.registerTask('build-prod', ['jshint', 'concat:js', 'concat:css', 'cssmin', 'copy:images','uglify']);
 
+    // for heroku
+    grunt.registerTask('heroku', ['bower', 'build-prod']);
 };

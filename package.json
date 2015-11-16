@@ -2,9 +2,11 @@
   "name": "todoapp",
   "version": "1.0.0",
   "description": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "postinstall": "grunt heroku"
   },
   "keywords": [
     "todoapp"
@@ -17,6 +19,9 @@
     "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-jshint": "^0.11.3",
-    "grunt-contrib-uglify": "^0.10.0"
+    "grunt-contrib-uglify": "^0.10.0",
+    "grunt-bower-installer": "^0.3.6",
+    "grunt-cli": "^0.1.13",
+    "express": "^4.13.3"
   }
 }
